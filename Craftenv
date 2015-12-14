@@ -1,0 +1,15 @@
+# -*- mode: python -*-
+
+from os import environ
+from craftr import path, platform
+
+# Set up some default environment variables.
+if 'MYO_SDK_PATH' not in environ:
+  sdk_path = path.local('../myo-sdk-{0}-0.9.0'.format(platform.ident))
+  print('Setting up default MYO_SDK_PATH =', sdk_path)
+  environ['MYO_SDK_PATH'] = sdk_path
+
+if platform.name == 'Windows' and 'MYO_SDK_WINARCH' not in environ:
+  arch = environ.get('architecture', '32')
+  print('Setting up default MYO_SDK_WINARCH =', arch)
+  environ['MYO_SDK_WINARCH'] = arch
