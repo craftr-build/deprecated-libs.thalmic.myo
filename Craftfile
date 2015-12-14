@@ -1,0 +1,19 @@
+# craftr_module(thalmic.myo.sample)
+
+from craftr import session, path
+from craftr.ext import rules, compiler
+from craftr.ext.thalmic.myo import libmyo
+
+cxx = compiler.toolset.CxxCompiler()
+ld = compiler.toolset.Linker()
+
+sample = ld.link(
+  output = 'sample',
+  output_type = 'bin',
+  inputs = cxx.compile(
+    sources = [path.local('sample.cpp')],
+    frameworks = [libmyo],
+  ),
+)
+
+run = rules.run_program(sample)
