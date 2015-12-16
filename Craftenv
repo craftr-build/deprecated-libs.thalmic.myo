@@ -1,7 +1,8 @@
 # -*- mode: python -*-
 
 from os import environ
-from craftr import path, platform
+from craftr import path
+from craftr.ext import platform
 
 # Set up some default environment variables.
 if 'MYO_SDK_PATH' not in environ:

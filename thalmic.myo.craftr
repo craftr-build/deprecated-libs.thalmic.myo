@@ -19,7 +19,8 @@
 # THE SOFTWARE.
 
 from os import environ
-from craftr import path, platform, Framework
+from craftr import path, Framework
+from craftr.ext import platform
 
 sdk_path = environ.get('MYO_SDK_PATH', None)
 if not sdk_path or not path.isdir(sdk_path):
