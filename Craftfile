@@ -13,4 +13,4 @@ sample = platform.ld.link(
   ),
 )
 
-run = rules.run_program(sample)
+run = rules.run(sample)
