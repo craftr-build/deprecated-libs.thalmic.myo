@@ -1,7 +1,6 @@
 # -*- mode: python -*-
 
 from os import environ
-from craftr import path
 from craftr.ext import platform
 
 # Set up some default environment variables.
