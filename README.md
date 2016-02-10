@@ -1,4 +1,4 @@
-# Craftr: `thalmic.myo`
+`libs.thalmic.myo` -- Craftr module to compile program with the Thalmic Myo SDK
 
 __Requirements__:
 
@@ -10,5 +10,5 @@ __Usage__:
 Import the `libmyo` framework and pass it to the compiler.
 
 ```python
-from craftr.ext.thalmic.myo import libmyo
+from craftr.ext.libs.thalmic.myo import libmyo
 ```
